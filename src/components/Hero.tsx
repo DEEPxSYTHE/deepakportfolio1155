@@ -1,6 +1,7 @@
 
 import { ArrowRight, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -21,11 +22,18 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20">
       <div className="container mx-auto text-center">
         <div className="animate-fade-in">
-          {/* Profile Image Placeholder */}
-          <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-electric-blue to-neon-green p-1">
-            <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-              <span className="text-4xl font-mono font-bold text-gradient">DS</span>
-            </div>
+          {/* Profile Image */}
+          <div className="w-32 h-32 mx-auto mb-8">
+            <Avatar className="w-full h-full border-4 border-gradient-to-br from-electric-blue to-neon-green">
+              <AvatarImage 
+                src="https://i.postimg.cc/bYgS5KZb/My-Profile-Photo.jpg" 
+                alt="Deepak Sharma"
+                className="object-cover"
+              />
+              <AvatarFallback className="text-4xl font-mono font-bold text-gradient bg-gradient-to-br from-electric-blue/10 to-neon-green/10">
+                DS
+              </AvatarFallback>
+            </Avatar>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-mono font-bold mb-6">
